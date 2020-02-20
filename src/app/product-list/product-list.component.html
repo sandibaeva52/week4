@@ -1,0 +1,35 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products" >
+<div >
+  <h3>
+    <a [href]="product.link" target="_blank" [title]="product.name + ' link to AliExpress'"> {{ product.name }}</a>
+    
+  </h3>
+ <img src={{product.image}} alt="img"> 
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+  <p *ngIf="product.price>500" >
+    Price:{{product.price}}
+  </p>
+</div>
+
+ <div *ngIf="product.image">
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+</div>
+<br><br>
+   <button>
+     
+  <a href="https://wa.me/?text=https://aliexpress.ru/item/4000558020769.html?spm=a2g0o.home.15002.23.76712c25Nlm4Er&gps-id=pcJustForYou&scm=1007.13562.158406.0&scm_id=1007.13562.158406.0&scm-url=1007.13562.158406.0&pvid=fa32c08e-ca1a-40aa-a4cf-f68930c240fb&_t=gps-id:pcJustForYou,scm-url:1007.13562.158406.0,pvid:fa32c08e-ca1a-40aa-a4cf-f68930c240fb,tpp_buckets:668%230%23131923%2318_668%23808%234094%23487_668%23888%233325%235"
+   data-text="Take a look at this awesome website:"
+   class="wa_btn wa_btn_s"style="color:white" >Share via Whatsapp</a>
+
+  </button>
+
+</div>
